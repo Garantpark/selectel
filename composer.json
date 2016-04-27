@@ -1,7 +1,9 @@
 {
   "name": "garantpark/selectel",
   "description": "Selectel Cloud Storage API Client",
+  "license": "MIT",
   "require": {
+    "php": ">=5.4.0",
     "guzzlehttp/guzzle": "^6.2"
   },
   "autoload": {

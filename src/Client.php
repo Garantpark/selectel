@@ -189,7 +189,7 @@ class Client
      *
      * @param string $name
      *
-     * @throws \GarantPark\Selectel\Exceptions\GeneralException
+     * @throws \GarantPark\Selectel\Exceptions\ContainerNotFoundException
      *
      * @return array
      */
@@ -198,7 +198,7 @@ class Client
         $response = $this->http->head('/'.$name);
 
         if (!$response->hasHeader('X-Container-Object-Count')) {
-            throw new GeneralException('Container was not found.');
+            throw new ContainerNotFoundException('Container was not found.');
         }
 
         $container = [
@@ -511,16 +511,16 @@ class Client
      * Sets secret key for signed links generation.
      * Key can be set to account or specific container.
      *
-     * @param string $objectPath
+     * @param string $containerName
      * @param string $secretKey
      *
      * @throws \GarantPark\Selectel\Exceptions\ObjectNotFoundException
      *
      * @return bool
      */
-    public function setObjectSecretKey($objectPath, $secretKey)
+    public function setObjectSecretKey($containerName, $secretKey)
     {
-        $fullPath = '/'.ltrim($objectPath, '/');
+        $fullPath = '/'.ltrim($containerName, '/');
         $headers = [];
 
         if ($fullPath === '/') {
