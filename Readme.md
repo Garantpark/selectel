@@ -1,6 +1,6 @@
 # Selectel Cloud Storage API
 [![Latest Stable Version](https://poser.pugx.org/garantpark/selectel/version)](https://packagist.org/packages/garantpark/selectel)
-[![License](https://poser.pugx.org/garantpark/selectel/license)](https://packagist.org/garantpark/selectel/phpunit)
+[![License](https://poser.pugx.org/garantpark/selectel/license)](https://packagist.org/packages/garantpark/selectel/)
 
 [Selectel](http://selectel.ru)'s [Cloud Storage](https://selectel.ru/services/cloud-storage/) API Client.
 ## Install
