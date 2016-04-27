@@ -1,0 +1,12 @@
+{
+  "name": "garantpark/selectel",
+  "description": "Selectel Cloud Storage API Client",
+  "require": {
+    "guzzlehttp/guzzle": "^6.2"
+  },
+  "autoload": {
+    "psr-4": {
+      "GarantPark\\Selectel\\": "src/"
+    }
+  }
+}
