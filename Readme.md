@@ -86,6 +86,7 @@ Supported archive types:
 - tar
 - tar.gz
 - tar.bz2
+
 ### [Add metadata to a file](https://support.selectel.ru/storage/api_info/#id15)
 ``` php
 $remotePath = '/backups/database/' . date('Y-m-d') . 'tar.gz'; // cloud path
