@@ -555,7 +555,7 @@ class Client
     {
         $method = 'GET';
         $signBody = sprintf("%s\n%s\n%s", $method, $expires, $url);
-        $signature = hash_hmac('sha1', $body, $secretKey);
+        $signature = hash_hmac('sha1', $signBody, $secretKey);
 
         $url .= (strpos($url, '?') !== false ? '&' : '?');
         $url .= 'temp_url_sig='.$signature.'&temp_url_expires='.$expires;
